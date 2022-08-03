@@ -15,7 +15,7 @@ const FormMessage = ({ user, newMessage, setNewMessage, dataArray }) => {
       photoURL: user.photoURL,
     }
 
-    dataArray.push(pushData)
+    dataArray.unshift(pushData)
 
 
     await addDoc(collection(db, "messages"), pushData);
