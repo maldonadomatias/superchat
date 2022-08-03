@@ -36,7 +36,7 @@ export function Home() {
     };
     dummy.current.scrollIntoView({ behavior: "smooth" });
     fetchData();
-  }, [newMessage]);
+  }, [newMessage, dataArray]);
 
   async function getData() {
     const ordersRef = collection(db, "messages");
@@ -74,7 +74,7 @@ export function Home() {
         </div>
         <div ref={dummy}></div>
       </div>
-      <div className={classes.container}>
+      <div className={classes.bottomContainer}>
         <FormMessage
           dataArray={dataArray}
           newMessage={newMessage}

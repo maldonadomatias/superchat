@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 
+import { FiSend } from "react-icons/fi";
+
 const FormMessage = ({ user, newMessage, setNewMessage, dataArray }) => {
   const [formValue, setFormValue] = useState("");
 
@@ -13,10 +15,9 @@ const FormMessage = ({ user, newMessage, setNewMessage, dataArray }) => {
       createdAt: new Date(),
       uid: user.uid,
       photoURL: user.photoURL,
-    }
+    };
 
-    dataArray.unshift(pushData)
-
+    dataArray.unshift(pushData);
 
     await addDoc(collection(db, "messages"), pushData);
 
@@ -31,7 +32,9 @@ const FormMessage = ({ user, newMessage, setNewMessage, dataArray }) => {
           value={formValue}
           onChange={(e) => setFormValue(e.target.value)}
         ></input>
-        <button type="submit">Submit</button>
+        <button type="submit">
+          <FiSend />
+        </button>
       </form>
     </div>
   );
