@@ -17,6 +17,7 @@
   justify-content: space-around;
   width: 100%;
   align-items: self-start;
+  max-height: 100vh;
 }
 
 .navbar {
@@ -79,7 +80,7 @@
   text-align: center;
   box-shadow: 0 0 20px 0 #00000033, 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 10px;
-  max-height: 500px;
+  max-height: 400px;
   overflow-y: scroll;
 }
 

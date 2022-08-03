@@ -51,7 +51,6 @@ export function Home() {
     setDataArray(data);
   }
 
-  console.log(dataArray);
 
   return (
     <div className={classes.mainContainer}>
