@@ -7,7 +7,7 @@ export function ProtectedRoute({ children }) {
 
   if (loading)
     return (
-      <div style={{display: 'flex', justifyContent: 'center', textAlign: 'center'}}>
+      <div style={{display: 'flex', justifyContent: 'center', textAlign: 'center', marginTop: '5rem'}}>
         <Spinner />
       </div>
     );
